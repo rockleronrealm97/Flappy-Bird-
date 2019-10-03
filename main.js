@@ -16,7 +16,8 @@ create: function() {
     game.physics.arcade.enable(this.bird);
 
     this.bird.body.gravity.y = 1000;  
-
+    console.log(this.bird.body);
+   
     var spaceKey = game.input.keyboard.addKey(
                     Phaser.Keyboard.SPACEBAR);
     spaceKey.onDown.add(this.jump, this);  
@@ -61,8 +62,9 @@ addRowOfPipes: function() {
     for (var i = 0; i < 8; i++)
         if (i != hole && i != hole + 1) 
             this.addOnePipe(400, i * 60 + 10); 
-
+    
     this.score += 1;
+    console.log("Score updated to :",this.score);
     this.labelScore.text = this.score;    
 },
 };
