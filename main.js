@@ -7,7 +7,8 @@ var mainState = {
 
 create: function() { 
    
-    game.stage.backgroundColor = '#71c5cf';
+    // update background color to match halloween theme.
+    game.stage.backgroundColor = '#cf9371';
 
     game.physics.startSystem(Phaser.Physics.ARCADE);
 
@@ -64,7 +65,6 @@ addRowOfPipes: function() {
             this.addOnePipe(400, i * 60 + 10); 
     
     this.score += 1;
-    console.log("Score updated to :",this.score);
     this.labelScore.text = this.score;    
 },
 };
